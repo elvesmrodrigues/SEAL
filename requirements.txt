@@ -2,8 +2,11 @@ tqdm
 nltk
 jsonlines
 fuzzywuzzy
+fairseq
 more_itertools
 transformers==4.13.0
+numpy==1.26
+torch==1.11
 spacy
 psutil
 ftfy

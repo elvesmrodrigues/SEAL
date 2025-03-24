@@ -6,22 +6,22 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-DIR="$(cd "$(dirname "$0")" && pwd)"
+DIR=./scripts/training
 
-DATASET=$1
+DATASET=./data
 # $DATASET must contain 4 plain text files, in which every line is a different training_fairseq/validation example:
 # - $DATASET/train.source
 # - $DATASET/train.target (same number of lines as train.source)
 # - $DATASET/dev.source
 # - $DATASET/dev.target (same number of lines as dev.source)
 
-BART_FILES=$2
+BART_FILES=./models/BART
 # $BART_FILES must contain the following files:
 # - $BART_FILES/encoder.json - https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/encoder.json
 # - $BART_FILES/vocab.bpe - https://dl.fbaipublicfiles.com/fairseq/gpt2_bpe/vocab.bpe
 # - $BART_FILES/bart.large/dict.txt - https://dl.fbaipublicfiles.com/fairseq/models/bart.large.tar.gz (decompress)
 
-echo "Processing $1"
+echo "Processing $DATASET"
 
 # BPE training.
 for SPLIT in train dev; do

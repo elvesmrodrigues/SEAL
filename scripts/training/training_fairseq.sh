@@ -4,10 +4,10 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-DATASET=$1
+DATASET=./data
 # This folder should contain the correct files if you have run scripts/training/preprocess_fairseq.sh before!
 
-BART_FILES=$2
+BART_FILES=./models/BART
 # $BART_FILES must contain the following file:
 # - $BART_FILES/bart.large/model.pt - https://dl.fbaipublicfiles.com/fairseq/models/bart.large.tar.gz (decompress)
 
